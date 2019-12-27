@@ -1,0 +1,25 @@
+{
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "gcc build active file",
+            "command": "/bin/gcc",
+            "args": [
+                "-g",
+                //"${file}",
+                 "${fileDirname}/main.c",
+                 "${fileDirname}/add.c",
+                 "${fileDirname}/sub.c",
+                 "-g", // 生成和调试有关的信息
+                 "-Wall", // 开启额外警告
+                 "-o",
+                 //"${fileDirname}/${fileBasenameNoExtension}"
+                 "${fileDirname}/calculater.out"
+            ],
+            "options": {
+                "cwd": "/bin"
+            }
+        }
+    ],
+    "version": "2.0.0"
+}
